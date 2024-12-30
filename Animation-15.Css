@@ -1,0 +1,123 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #111;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    pointer-events: none;
+}
+
+.container section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    text-align: center;
+}
+
+.textBox h1{
+    font-size: 3.4em;
+    color: aliceblue;
+}
+
+.textBox h1 span{
+    color: #00bfff;
+}
+
+.textBox p{
+    font-size: 1.4em;
+    color: aliceblue;
+}
+
+.textBox .Home-button-1{
+    padding: 8px 10px;
+    margin: 16px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#000;
+    background: transparent;
+    border: 2px solid lightseagreen;
+    color: #00bfff;
+    transition: .3s; 
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.textBox .Home-button-1:hover{
+    background: #ff00ff;
+}
+
+.textBox .Home-button-2{
+    padding: 8px 10px;
+    margin: 16px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#000;
+    background: transparent;
+    border: 2px solid #ff004f;
+    color: #ff00ff; 
+    transition: .3s; 
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.textBox .Home-button-2:hover{
+    background: #00bfff;
+}
+
+.bgAinmation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100Vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+   z-index: 2;
+   filter: brightness(1.1);
+   transition: 2s ease;
+   position: relative;
+   margin: 2px;
+   background: #1d1d1d;
+}
+
+.colorBox:hover{
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+
+.bagroundAnim{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(#00ff00, #00bfff);
+  fill: blur(60px);
+  animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack{
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}
